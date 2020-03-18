@@ -75,8 +75,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new CopyWebpackPlugin([ { from: path.join(cesiumSource, cesiumWorkers), to: 'Workers' } ]),     //flag
     new CopyWebpackPlugin([ { from: path.join(cesiumSource, 'Assets'), to: 'Assets' } ]),
     new CopyWebpackPlugin([ { from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' } ]),
-    // new CopyWebpackPlugin([ { from: path.join(cesiumSource, 'ThirdParty/Workers'), to: 'ThirdParty/Workers' } ]),
-    // new CopyWebpackPlugin([ { from: 'ThirdParty', to: 'ThirdParty' } ]),
+    new CopyWebpackPlugin([ { from: path.join(cesiumSource, 'ThirdParty/Workers'), to: 'ThirdParty/Workers' } ]),
+    new CopyWebpackPlugin([ { from: 'ThirdParty', to: 'ThirdParty' } ]),
 ]
 })
 
